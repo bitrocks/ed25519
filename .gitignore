@@ -3,3 +3,7 @@ c_src/*.o
 src/ed25519.beam
 tmp
 priv/
+ebin/
+.rebar/
+.eunit/
+_build/

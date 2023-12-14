@@ -19,27 +19,33 @@
 
 -spec keypair() -> {ok, secret(), public()} | {error, atom()}.
 keypair() ->
-	"NIF library not loaded".
+	erlang:nif_error({error, not_loaded}).
+
 
 -spec keypair(seed()) -> {ok, secret(), public()} | {error, atom()}.
 keypair(_Seed) ->
-	"NIF library not loaded".
+	erlang:nif_error({error, not_loaded}).
+
 
 -spec public_key(secret()) -> {ok, public()} | {error, atom()}.
-public_key(_Secret) -> 
-	"NIF library not loaded".
+public_key(_Secret) ->
+	erlang:nif_error({error, not_loaded}).
+
 
 -spec sign(message(), secret()) -> {ok, signature()}.
 sign(_Message, _Secret) ->
-	"NIF library not loaded".
+	erlang:nif_error({error, not_loaded}).
+
 
 -spec sign_bytom(message(), secret()) -> {ok, signature()}.
 sign_bytom(_Message, _Secret) ->
-	"NIF library not loaded".
+	erlang:nif_error({error, not_loaded}).
+
 
 -spec verify(signature(), message(), public()) -> {ok, atom()}.
-verify(_Signature, _Message, _Public) -> 
-	"NIF library not loaded".
+verify(_Signature, _Message, _Public) ->
+	erlang:nif_error({error, not_loaded}).
+
 
 
 
